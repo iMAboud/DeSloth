@@ -13,7 +13,7 @@
 
 - Standalone runner renamed to **DeSloth** (`DeSloth.exe`), compiled with single `desloth.ico` embedding (~806 KB) and floating 104px logo without background box.
 - Workspace cleaned of temporary scratch files and root profile duplicates.
-- Added `.gitignore` and `run.ps1` for GitHub hosting and one-liner execution.
+- Added `.gitignore` and `run.ps1` configured for repository `iMAboud/DeSloth`.
 
 ## Key Files
 - `Launch-Creator.bat`: Double-click launcher for Creator Studio.

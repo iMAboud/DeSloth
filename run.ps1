@@ -1,11 +1,11 @@
 # DeSloth One-Liner Bootstrapper
-# Usage: irm https://raw.githubusercontent.com/<USERNAME>/<REPO>/main/run.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/iMAboud/DeSloth/main/run.ps1 | iex
 
 $ErrorActionPreference = 'Stop'
 
 # GitHub Repository Configuration (Replace with your GitHub Username & Repository Name)
-$GitHubUser = "YOUR_GITHUB_USERNAME"
-$GitHubRepo = "YOUR_REPO_NAME"
+$GitHubUser = "iMAboud"
+$GitHubRepo = "DeSloth"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
