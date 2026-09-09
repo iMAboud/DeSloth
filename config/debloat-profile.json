@@ -1,0 +1,2051 @@
+﻿{
+    "CreateRestorePoint":  true,
+    "RestartExplorer":  true,
+    "Win11Debloat":  {
+                         "Apps":  [
+                                      "Clipchamp.Clipchamp",
+                                      "Microsoft.3DBuilder",
+                                      "Microsoft.549981C3F5F10",
+                                      "Microsoft.BingFinance",
+                                      "Microsoft.BingFoodAndDrink",
+                                      "Microsoft.BingHealthAndFitness",
+                                      "Microsoft.BingNews",
+                                      "Microsoft.BingSports",
+                                      "Microsoft.BingTranslator",
+                                      "Microsoft.BingTravel",
+                                      "Microsoft.BingWeather",
+                                      "XP9CXNGPPJ97XX",
+                                      "Microsoft.Windows.AIHub",
+                                      "Microsoft.PCManager",
+                                      "Microsoft.Getstarted",
+                                      "Microsoft.Messaging",
+                                      "Microsoft.Microsoft3DViewer",
+                                      "Microsoft.MicrosoftJournal",
+                                      "Microsoft.MicrosoftOfficeHub",
+                                      "Microsoft.MicrosoftPowerBIForWindows",
+                                      "Microsoft.MicrosoftSolitaireCollection",
+                                      "Microsoft.MicrosoftStickyNotes",
+                                      "Microsoft.MixedReality.Portal",
+                                      "Microsoft.NetworkSpeedTest",
+                                      "Microsoft.News",
+                                      "Microsoft.Office.OneNote",
+                                      "Microsoft.Office.Sway",
+                                      "Microsoft.OneConnect",
+                                      "Microsoft.Print3D",
+                                      "Microsoft.PowerAutomateDesktop",
+                                      "Microsoft.SkypeApp",
+                                      "Microsoft.Todos",
+                                      "Microsoft.Windows.DevHome",
+                                      "Microsoft.WindowsAlarms",
+                                      "Microsoft.WindowsFeedbackHub",
+                                      "Microsoft.WindowsMaps",
+                                      "Microsoft.WindowsSoundRecorder",
+                                      "Microsoft.XboxApp",
+                                      "Microsoft.ZuneVideo",
+                                      "MicrosoftCorporationII.MicrosoftFamily",
+                                      "MicrosoftCorporationII.QuickAssist",
+                                      "MicrosoftTeams",
+                                      "MSTeams",
+                                      "ACGMediaPlayer",
+                                      "ActiproSoftwareLLC",
+                                      "AdobeSystemsIncorporated.AdobePhotoshopExpress",
+                                      "Amazon.com.Amazon",
+                                      "AmazonVideo.PrimeVideo",
+                                      "Asphalt8Airborne",
+                                      "AutodeskSketchBook",
+                                      "CaesarsSlotsFreeCasino",
+                                      "COOKINGFEVER",
+                                      "CyberLinkMediaSuiteEssentials",
+                                      "DisneyMagicKingdoms",
+                                      "Disney.37853FC22B2CE",
+                                      "DrawboardPDF",
+                                      "Duolingo-LearnLanguagesforFree",
+                                      "EclipseManager",
+                                      "FACEBOOK.FACEBOOK",
+                                      "FarmVille2CountryEscape",
+                                      "Flipboard",
+                                      "HiddenCity",
+                                      "HULULLC.HULUPLUS",
+                                      "iHeartRadio",
+                                      "Facebook.Instagram",
+                                      "king.com.BubbleWitch3Saga",
+                                      "king.com.CandyCrushSaga",
+                                      "king.com.CandyCrushSodaSaga",
+                                      "LinkedInforWindows",
+                                      "MarchofEmpires",
+                                      "4DF9E0F8.Netflix",
+                                      "NYTCrossword",
+                                      "OneCalendar",
+                                      "PandoraMediaInc",
+                                      "PhototasticCollage",
+                                      "PicsArt-PhotoStudio",
+                                      "PolarrPhotoEditorAcademicEdition",
+                                      "flaregamesGmbH.RoyalRevolt",
+                                      "Sidia.LiveWallpaper",
+                                      "SlingTV",
+                                      "SpotifyAB.SpotifyMusic",
+                                      "BytedancePte.Ltd.TikTok",
+                                      "TuneInRadio",
+                                      "WinZipUniversal",
+                                      "Microsoft.BingSearch",
+                                      "Microsoft.Edge",
+                                      "Microsoft.GamingApp",
+                                      "Microsoft.GetHelp",
+                                      "Microsoft.M365Companions",
+                                      "Microsoft.MSPaint",
+                                      "Microsoft.OneDrive",
+                                      "Microsoft.OutlookForWindows",
+                                      "Microsoft.Paint",
+                                      "Microsoft.People",
+                                      "Microsoft.RemoteDesktop",
+                                      "Microsoft.ScreenSketch",
+                                      "Microsoft.StartExperiencesApp",
+                                      "Microsoft.Whiteboard",
+                                      "Microsoft.WindowsCamera",
+                                      "Microsoft.windowscommunicationsapps",
+                                      "Microsoft.Xbox.TCUI",
+                                      "Microsoft.XboxGameOverlay",
+                                      "Microsoft.XboxGamingOverlay",
+                                      "Microsoft.XboxIdentityProvider",
+                                      "Microsoft.XboxSpeechToTextOverlay",
+                                      "Microsoft.YourPhone",
+                                      "MicrosoftWindows.CrossDevice",
+                                      "MicrosoftWindows.Client.WebExperience",
+                                      "Microsoft.WidgetsPlatformRuntime",
+                                      "LGElectronics.LGMonitorApp",
+                                      "AD2F1837.HPAIExperienceCenter",
+                                      "AD2F1837.HPConnectedMusic",
+                                      "AD2F1837.HPConnectedPhotopoweredbySnapfish",
+                                      "AD2F1837.HPDesktopSupportUtilities",
+                                      "AD2F1837.HPEasyClean",
+                                      "AD2F1837.HPFileViewer",
+                                      "AD2F1837.HPJumpStarts",
+                                      "AD2F1837.HPPCHardwareDiagnosticsWindows",
+                                      "AD2F1837.HPPowerManager",
+                                      "AD2F1837.HPPrinterControl",
+                                      "AD2F1837.HPPrivacySettings",
+                                      "AD2F1837.HPQuickDrop",
+                                      "AD2F1837.HPQuickTouch",
+                                      "AD2F1837.HPRegistration",
+                                      "AD2F1837.HPSupportAssistant",
+                                      "AD2F1837.HPSureShieldAI",
+                                      "AD2F1837.HPSystemInformation",
+                                      "AD2F1837.HPWelcome",
+                                      "AD2F1837.HPWorkWell",
+                                      "AD2F1837.myHP",
+                                      "E046963F.LenovoCompanion",
+                                      "LenovoCompanyLimited.LenovoVantageService",
+                                      "DellInc.DellSupportAssistforPCs",
+                                      "DellInc.DellDigitalDelivery",
+                                      "DellInc.DellMobileConnect"
+                                  ],
+                         "Tweaks":  [
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableSuggestions"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableFindMyDevice"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableLockscreenTips"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableDesktopSpotlight"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideDesktopSpotlightIcon"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableEdgeAds"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableDVR"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableGameBarIntegration"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "ClearStart"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "ClearStartAllUsers"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableStartRecommended"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableStartAllApps"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableStartPhoneLink"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableBing"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableSettings365Ads"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableSettingsHome"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableDragTray"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableMouseAcceleration"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableStickyKeys"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableSnapAssist"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideSearchTb"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideTaskview"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideChat"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableFastStartup"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableModernStandbyNetworking"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "MMTaskbarModeAll"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "ExplorerToThisPC"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideDupliDrive"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableUpdateASAP"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "PreventUpdateAutoReboot"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "DisableDeviceAutoAppDownload"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "Hide3dObjects"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideMusic"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideIncludeInLibrary"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideGiveAccessTo"
+                                        },
+                                        {
+                                            "Value":  true,
+                                            "Name":  "HideShare"
+                                        }
+                                    ]
+                     },
+    "WinUtil":  [
+                    "WPFTweaksActivity",
+                    "WPFTweaksHiber",
+                    "WPFTweaksWidget",
+                    "WPFTweaksDisableStoreSearch",
+                    "WPFTweaksLocation",
+                    "WPFTweaksServices",
+                    "WPFTweaksBraveDebloat",
+                    "WPFTweaksDisableWarningForUnsignedRdp",
+                    "WPFTweaksEdgeDebloat",
+                    "WPFTweaksConsumerFeatures",
+                    "WPFTweaksTelemetry",
+                    "WPFTweaksDeliveryOptimization",
+                    "WPFTweaksRemoveEdge",
+                    "WPFTweaksDisableBitLocker",
+                    "WPFTweaksRemoveOneDrive",
+                    "WPFTweaksRemoveHomeAndGallery",
+                    "WPFTweaksReservedStorage",
+                    "WPFTweaksRestorePoint",
+                    "WPFTweaksEndTaskOnTaskbar",
+                    "WPFTweaksStorage",
+                    "WPFTweaksWindowsAI",
+                    "WPFTweaksWPBT",
+                    "WPFTweaksPreventDeviceMetadataFromNetwork",
+                    "WPFTweaksRazerBlock",
+                    "WPFTweaksLogiBlock",
+                    "WPFTweaksDisableNotifications",
+                    "WPFTweaksBlockAdobeNet",
+                    "WPFTweaksDeleteTempFiles",
+                    "WPFTweaksIPv46",
+                    "WPFTweaksTeredo",
+                    "WPFTweaksDisableIPv6",
+                    "WPFTweaksDisableBGapps",
+                    "WPFTweaksDisableExplorerAutoDiscovery",
+                    "WPFToggleDarkMode",
+                    "WPFToggleShowExt",
+                    "WPFAddUltPerf"
+                ],
+    "Services":  [
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AarSvc_7ad58",
+                         "DisplayName":  "AarSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AxInstSV",
+                         "DisplayName":  "ActiveX Installer (AxInstSV)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ADPSvc",
+                         "DisplayName":  "Aggregated Data Platform Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AppReadiness",
+                         "DisplayName":  "App Readiness"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "AppHostSvc",
+                         "DisplayName":  "Application Host Helper Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AppIDSvc",
+                         "DisplayName":  "Application Identity"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Appinfo",
+                         "DisplayName":  "Application Information"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ALG",
+                         "DisplayName":  "Application Layer Gateway Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AppMgmt",
+                         "DisplayName":  "Application Management"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "aspnet_state",
+                         "DisplayName":  "ASP.NET State Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "AssignedAccessManagerSvc",
+                         "DisplayName":  "AssignedAccessManager Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "AsusUpdateCheck",
+                         "DisplayName":  "AsusUpdateCheck"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "tzautoupdate",
+                         "DisplayName":  "Auto Time Zone Updater"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BthAvctpSvc",
+                         "DisplayName":  "AVCTP service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BITS",
+                         "DisplayName":  "Background Intelligent Transfer Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BcastDVRUserService_7ad58",
+                         "DisplayName":  "BcastDVRUserService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BDESVC",
+                         "DisplayName":  "BitLocker Drive Encryption Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wbengine",
+                         "DisplayName":  "Block Level Backup Engine Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BTAGService",
+                         "DisplayName":  "Bluetooth Audio Gateway Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "bthserv",
+                         "DisplayName":  "Bluetooth Support Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "BluetoothUserService_7ad58",
+                         "DisplayName":  "BluetoothUserService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PeerDistSvc",
+                         "DisplayName":  "BranchCache"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "camsvc",
+                         "DisplayName":  "Capability Access Manager Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "CaptureService_7ad58",
+                         "DisplayName":  "CaptureService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "autotimesvc",
+                         "DisplayName":  "Cellular Time"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "CertPropSvc",
+                         "DisplayName":  "Certificate Propagation"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ClipSVC",
+                         "DisplayName":  "Client License Service (ClipSVC)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "CloudBackupRestoreSvc_7ad58",
+                         "DisplayName":  "CloudBackupRestoreSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "KeyIso",
+                         "DisplayName":  "CNG Key Isolation"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "COMSysApp",
+                         "DisplayName":  "COM+ System Application"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "CDPSvc",
+                         "DisplayName":  "Connected Devices Platform Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "DiagTrack",
+                         "DisplayName":  "Connected User Experiences and Telemetry"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ConsentUxUserSvc_7ad58",
+                         "DisplayName":  "ConsentUxUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "CmService",
+                         "DisplayName":  "Container Manager Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "VaultSvc",
+                         "DisplayName":  "Credential Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "CredentialEnrollmentManagerUserSvc_7ad58",
+                         "DisplayName":  "CredentialEnrollmentManagerUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DsSvc",
+                         "DisplayName":  "Data Sharing Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DusmSvc",
+                         "DisplayName":  "Data Usage"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "dcsvc",
+                         "DisplayName":  "Declared Configuration(DC) service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DoSvc",
+                         "DisplayName":  "Delivery Optimization"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DeviceAssociationService",
+                         "DisplayName":  "Device Association Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DeviceInstall",
+                         "DisplayName":  "Device Install Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DmEnrollmentSvc",
+                         "DisplayName":  "Device Management Enrollment Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "dmwappushservice",
+                         "DisplayName":  "Device Management Wireless Application Protocol (WAP) Push message Routing Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DsmSvc",
+                         "DisplayName":  "Device Setup Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DeviceAssociationBrokerSvc_7ad58",
+                         "DisplayName":  "DeviceAssociationBrokerSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DevicePickerUserSvc_7ad58",
+                         "DisplayName":  "DevicePickerUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DevicesFlowUserSvc_7ad58",
+                         "DisplayName":  "DevicesFlowUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DevQueryBroker",
+                         "DisplayName":  "DevQuery Background Discovery Broker"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "diagsvc",
+                         "DisplayName":  "Diagnostic Execution Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DPS",
+                         "DisplayName":  "Diagnostic Policy Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WdiServiceHost",
+                         "DisplayName":  "Diagnostic Service Host"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WdiSystemHost",
+                         "DisplayName":  "Diagnostic System Host"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "DialogBlockingService",
+                         "DisplayName":  "DialogBlockingService"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DisplayEnhancementService",
+                         "DisplayName":  "Display Enhancement Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "DispBrokerDesktopSvc",
+                         "DisplayName":  "Display Policy Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "TrkWks",
+                         "DisplayName":  "Distributed Link Tracking Client"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "MSDTC",
+                         "DisplayName":  "Distributed Transaction Coordinator"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "MapsBroker",
+                         "DisplayName":  "Downloaded Maps Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "embeddedmode",
+                         "DisplayName":  "Embedded Mode"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "EFS",
+                         "DisplayName":  "Encrypting File System (EFS)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "EntAppSvc",
+                         "DisplayName":  "Enterprise App Management Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "EapHost",
+                         "DisplayName":  "Extensible Authentication Protocol"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "fhsvc",
+                         "DisplayName":  "File History Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "fdPHost",
+                         "DisplayName":  "Function Discovery Provider Host"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "FDResPub",
+                         "DisplayName":  "Function Discovery Resource Publication"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "GameInputSvc",
+                         "DisplayName":  "GameInput Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "lfsvc",
+                         "DisplayName":  "Geolocation Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "GoogleChromeElevationService",
+                         "DisplayName":  "Google Chrome Elevation Service (GoogleChromeElevationService)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "GoogleUpdaterInternalService152.0.7933.0",
+                         "DisplayName":  "Google Updater Internal Service (GoogleUpdaterInternalService152.0.7933.0)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "GoogleUpdaterService152.0.7933.0",
+                         "DisplayName":  "Google Updater Service (GoogleUpdaterService152.0.7933.0)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "GraphicsPerfSvc",
+                         "DisplayName":  "GraphicsPerfSvc"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "hns",
+                         "DisplayName":  "Host Network Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "hpatchmon",
+                         "DisplayName":  "Hotpatch Monitoring Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "hidserv",
+                         "DisplayName":  "Human Interface Device Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "HvHost",
+                         "DisplayName":  "HV Host Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmickvpexchange",
+                         "DisplayName":  "Hyper-V Data Exchange Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "gcs",
+                         "DisplayName":  "Hyper-V Guest Compute Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicguestinterface",
+                         "DisplayName":  "Hyper-V Guest Service Interface"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicshutdown",
+                         "DisplayName":  "Hyper-V Guest Shutdown Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicheartbeat",
+                         "DisplayName":  "Hyper-V Heartbeat Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmcompute",
+                         "DisplayName":  "Hyper-V Host Compute Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicvmsession",
+                         "DisplayName":  "Hyper-V PowerShell Direct Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicrdv",
+                         "DisplayName":  "Hyper-V Remote Desktop Virtualization Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmictimesync",
+                         "DisplayName":  "Hyper-V Time Synchronization Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vmicvss",
+                         "DisplayName":  "Hyper-V Volume Shadow Copy Requestor"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "IKEEXT",
+                         "DisplayName":  "IKE and AuthIP IPsec Keying Modules"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "jhi_service",
+                         "DisplayName":  "Intel(R) Dynamic Application Loader Host Interface Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WMIRegistrationService",
+                         "DisplayName":  "Intel(R) Management Engine WMI Provider Registration"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "Intel(R) TPM Provisioning Service",
+                         "DisplayName":  "Intel(R) TPM Provisioning Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SharedAccess",
+                         "DisplayName":  "Internet Connection Sharing (ICS)"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "InventorySvc",
+                         "DisplayName":  "Inventory and Compatibility Appraisal service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "iphlpsvc",
+                         "DisplayName":  "IP Helper"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "IpxlatCfgSvc",
+                         "DisplayName":  "IP Translation Configuration Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PolicyAgent",
+                         "DisplayName":  "IPsec Policy Agent"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "IsoEnvBroker",
+                         "DisplayName":  "Isolation Environment Broker"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "IsolationSession",
+                         "DisplayName":  "IsolationSession"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "LocalKdc",
+                         "DisplayName":  "Kerberos Local Key Distribution Center"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "KtmRm",
+                         "DisplayName":  "KtmRm for Distributed Transaction Coordinator"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "LxpSvc",
+                         "DisplayName":  "Language Experience Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "lltdsvc",
+                         "DisplayName":  "Link-Layer Topology Discovery Mapper"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wlpasvc",
+                         "DisplayName":  "Local Profile Assistant Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "McpManagementService",
+                         "DisplayName":  "McpManagementService"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "MSMQ",
+                         "DisplayName":  "Message Queuing"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "MessagingService_7ad58",
+                         "DisplayName":  "MessagingService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wlidsvc",
+                         "DisplayName":  "Microsoft Account Sign-in Assistant"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "AppVClient",
+                         "DisplayName":  "Microsoft App-V Client"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "cloudidsvc",
+                         "DisplayName":  "Microsoft Cloud Identity Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WdNisSvc",
+                         "DisplayName":  "Microsoft Defender Antivirus Network Inspection Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "edgeupdatem",
+                         "DisplayName":  "Microsoft Edge Update Service (edgeupdatem)"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "MSiSCSI",
+                         "DisplayName":  "Microsoft iSCSI Initiator Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "MsKeyboardFilter",
+                         "DisplayName":  "Microsoft Keyboard Filter"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NgcSvc",
+                         "DisplayName":  "Microsoft Passport"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NgcCtnrSvc",
+                         "DisplayName":  "Microsoft Passport Container"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "swprv",
+                         "DisplayName":  "Microsoft Software Shadow Copy Provider"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "smphost",
+                         "DisplayName":  "Microsoft Storage Spaces SMP"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "InstallService",
+                         "DisplayName":  "Microsoft Store Install Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wuqisvc",
+                         "DisplayName":  "Microsoft Usage and Quality Insights"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SmsRouter",
+                         "DisplayName":  "Microsoft Windows SMS Router Service."
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "McmSvc",
+                         "DisplayName":  "Mobile Connectivity Management Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "MozillaMaintenance",
+                         "DisplayName":  "Mozilla Maintenance Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NaturalAuthentication",
+                         "DisplayName":  "Natural Authentication"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "NetMsmqActivator",
+                         "DisplayName":  "Net.Msmq Listener Adapter"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "NetPipeActivator",
+                         "DisplayName":  "Net.Pipe Listener Adapter"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "NetTcpActivator",
+                         "DisplayName":  "Net.Tcp Listener Adapter"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NetTcpPortSharing",
+                         "DisplayName":  "Net.Tcp Port Sharing Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Netlogon",
+                         "DisplayName":  "Netlogon"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NcdAutoSetup",
+                         "DisplayName":  "Network Connected Devices Auto-Setup"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NcbService",
+                         "DisplayName":  "Network Connection Broker"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Netman",
+                         "DisplayName":  "Network Connections"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NcaSvc",
+                         "DisplayName":  "Network Connectivity Assistant"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "netprofm",
+                         "DisplayName":  "Network List Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NlaSvc",
+                         "DisplayName":  "Network Location Awareness"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NetSetupSvc",
+                         "DisplayName":  "Network Setup Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "nvagent",
+                         "DisplayName":  "Network Virtualization Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "NPSMSvc_7ad58",
+                         "DisplayName":  "NPSMSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "CscService",
+                         "DisplayName":  "Offline Files"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "OneSyncSvc_7ad58",
+                         "DisplayName":  "OneSyncSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "ssh-agent",
+                         "DisplayName":  "OpenSSH Authentication Agent"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "defragsvc",
+                         "DisplayName":  "Optimize drives"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "P9RdrService_7ad58",
+                         "DisplayName":  "P9RdrService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WpcMonSvc",
+                         "DisplayName":  "Parental Controls"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Parsec",
+                         "DisplayName":  "Parsec"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SEMgrSvc",
+                         "DisplayName":  "Payments and NFC/SE Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PenService_7ad58",
+                         "DisplayName":  "PenService_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PerfHost",
+                         "DisplayName":  "Performance Counter DLL Host"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "pla",
+                         "DisplayName":  "Performance Logs \u0026 Alerts"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PhoneSvc",
+                         "DisplayName":  "Phone Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PimIndexMaintenanceSvc_7ad58",
+                         "DisplayName":  "PimIndexMaintenanceSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PlugPlay",
+                         "DisplayName":  "Plug and Play"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WPDBusEnum",
+                         "DisplayName":  "Portable Device Enumerator Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PrintDeviceConfigurationService",
+                         "DisplayName":  "Print Device Configuration Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "Spooler",
+                         "DisplayName":  "Print Spooler"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PrintNotify",
+                         "DisplayName":  "Printer Extensions and Notifications"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PrintScanBrokerService",
+                         "DisplayName":  "PrintScanBrokerService"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PrintWorkflowUserSvc_7ad58",
+                         "DisplayName":  "PrintWorkflowUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wercplsupport",
+                         "DisplayName":  "Problem Reports Control Panel Support"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "PcaSvc",
+                         "DisplayName":  "Program Compatibility Assistant Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "QWAVE",
+                         "DisplayName":  "Quality Windows Audio Video Experience"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "RmSvc",
+                         "DisplayName":  "Radio Management Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "TroubleshootingSvc",
+                         "DisplayName":  "Recommended Troubleshooting Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "refsdedupsvc",
+                         "DisplayName":  "ReFS Dedup Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "RasAuto",
+                         "DisplayName":  "Remote Access Auto Connection Manager"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "RasMan",
+                         "DisplayName":  "Remote Access Connection Manager"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SessionEnv",
+                         "DisplayName":  "Remote Desktop Configuration"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "TermService",
+                         "DisplayName":  "Remote Desktop Services"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "UmRdpService",
+                         "DisplayName":  "Remote Desktop Services UserMode Port Redirector"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "RpcLocator",
+                         "DisplayName":  "Remote Procedure Call (RPC) Locator"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "RemoteRegistry",
+                         "DisplayName":  "Remote Registry"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "RetailDemo",
+                         "DisplayName":  "Retail Demo Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "RemoteAccess",
+                         "DisplayName":  "Routing and Remote Access"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "seclogon",
+                         "DisplayName":  "Secondary Logon"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SstpSvc",
+                         "DisplayName":  "Secure Socket Tunneling Protocol Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SensorDataService",
+                         "DisplayName":  "Sensor Data Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SensrSvc",
+                         "DisplayName":  "Sensor Monitoring Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SensorService",
+                         "DisplayName":  "Sensor Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "LanmanServer",
+                         "DisplayName":  "Server"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "shpamsvc",
+                         "DisplayName":  "Shared PC Account Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ShellHWDetection",
+                         "DisplayName":  "Shell Hardware Detection"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SCardSvr",
+                         "DisplayName":  "Smart Card"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "ScDeviceEnum",
+                         "DisplayName":  "Smart Card Device Enumeration Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SCPolicySvc",
+                         "DisplayName":  "Smart Card Removal Policy"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SNMPTrap",
+                         "DisplayName":  "SNMP Trap"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "svsvc",
+                         "DisplayName":  "Spot Verifier"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SSDPSRV",
+                         "DisplayName":  "SSDP Discovery"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Steam Client Service",
+                         "DisplayName":  "Steam Client Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SteelSeriesGGUpdateServiceProxy",
+                         "DisplayName":  "SteelSeries GG Update Service Proxy"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WiaRpc",
+                         "DisplayName":  "Still Image Acquisition Events"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "StorSvc",
+                         "DisplayName":  "Storage Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "TieringEngineService",
+                         "DisplayName":  "Storage Tiers Management"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "SysMain",
+                         "DisplayName":  "SysMain"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "lmhosts",
+                         "DisplayName":  "TCP/IP NetBIOS Helper"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "TapiSrv",
+                         "DisplayName":  "Telephony"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "TimeBrokerSvc",
+                         "DisplayName":  "Time Broker"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "UdkUserSvc_7ad58",
+                         "DisplayName":  "UdkUserSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "UnistoreSvc_7ad58",
+                         "DisplayName":  "UnistoreSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "UsoSvc",
+                         "DisplayName":  "Update Orchestrator Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "upnphost",
+                         "DisplayName":  "UPnP Device Host"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "UevAgentService",
+                         "DisplayName":  "User Experience Virtualization Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "UserManager",
+                         "DisplayName":  "User Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ProfSvc",
+                         "DisplayName":  "User Profile Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "UserDataSvc_7ad58",
+                         "DisplayName":  "UserDataSvc_7ad58"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "vds",
+                         "DisplayName":  "Virtual Disk"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "VSInstallerElevationService",
+                         "DisplayName":  "Visual Studio Installer Elevation Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "VSStandardCollectorService150",
+                         "DisplayName":  "Visual Studio Standard Collector Service 150"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "VSS",
+                         "DisplayName":  "Volume Shadow Copy"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "w3logsvc",
+                         "DisplayName":  "W3C Logging Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WaaSMedicSvc",
+                         "DisplayName":  "WaaSMedicSvc"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WalletService",
+                         "DisplayName":  "WalletService"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WarpJITSvc",
+                         "DisplayName":  "Warp JIT Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "TokenBroker",
+                         "DisplayName":  "Web Account Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "webthreatdefsvc",
+                         "DisplayName":  "Web Threat Defense Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WebClient",
+                         "DisplayName":  "WebClient"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WFDSConMgrSvc",
+                         "DisplayName":  "Wi-Fi Direct Services Connection Manager Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WSAIFabricSvc",
+                         "DisplayName":  "Windows AI Components Host"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SDRSVC",
+                         "DisplayName":  "Windows Backup"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WbioSrvc",
+                         "DisplayName":  "Windows Biometric Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "FrameServer",
+                         "DisplayName":  "Windows Camera Frame Server"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "FrameServerMonitor",
+                         "DisplayName":  "Windows Camera Frame Server Monitor"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wcncsvc",
+                         "DisplayName":  "Windows Connect Now - Config Registrar"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "Wcmsvc",
+                         "DisplayName":  "Windows Connection Manager"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Sense",
+                         "DisplayName":  "Windows Defender Advanced Threat Protection Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WEPHOSTSVC",
+                         "DisplayName":  "Windows Encryption Provider Host Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WerSvc",
+                         "DisplayName":  "Windows Error Reporting Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "Wecsvc",
+                         "DisplayName":  "Windows Event Collector"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "FontCache",
+                         "DisplayName":  "Windows Font Cache Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "whesvc",
+                         "DisplayName":  "Windows Health and Optimized Experiences"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "wisvc",
+                         "DisplayName":  "Windows Insider Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "msiserver",
+                         "DisplayName":  "Windows Installer"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "LicenseManager",
+                         "DisplayName":  "Windows License Manager Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WManSvc",
+                         "DisplayName":  "Windows Management Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "midisrv",
+                         "DisplayName":  "Windows MIDI Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "icssvc",
+                         "DisplayName":  "Windows Mobile Hotspot Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "TrustedInstaller",
+                         "DisplayName":  "Windows Modules Installer"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "perceptionsimulation",
+                         "DisplayName":  "Windows Perception Simulation Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WAS",
+                         "DisplayName":  "Windows Process Activation Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "PushToInstall",
+                         "DisplayName":  "Windows PushToInstall Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WinRM",
+                         "DisplayName":  "Windows Remote Management (WS-Management)"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WSearch",
+                         "DisplayName":  "Windows Search"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "SecurityHealthService",
+                         "DisplayName":  "Windows Security Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "W32Time",
+                         "DisplayName":  "Windows Time"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wuauserv",
+                         "DisplayName":  "Windows Update"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ApxSvc",
+                         "DisplayName":  "Windows Virtual Audio Device Proxy Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WinHttpAutoProxySvc",
+                         "DisplayName":  "WinHTTP Web Proxy Auto-Discovery Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "dot3svc",
+                         "DisplayName":  "Wired AutoConfig"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "WlanSvc",
+                         "DisplayName":  "WLAN AutoConfig"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "wmiApSrv",
+                         "DisplayName":  "WMI Performance Adapter"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "LanmanWorkstation",
+                         "DisplayName":  "Workstation"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "W3SVC",
+                         "DisplayName":  "World Wide Web Publishing Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "WwanSvc",
+                         "DisplayName":  "WWAN AutoConfig"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "XboxGipSvc",
+                         "DisplayName":  "Xbox Accessory Management Service"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "XblAuthManager",
+                         "DisplayName":  "Xbox Live Auth Manager"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "XblGameSave",
+                         "DisplayName":  "Xbox Live Game Save"
+                     },
+                     {
+                         "TargetMode":  "Disabled",
+                         "Name":  "XboxNetApiSvc",
+                         "DisplayName":  "Xbox Live Networking Service"
+                     },
+                     {
+                         "TargetMode":  "Manual",
+                         "Name":  "ZTHELPER",
+                         "DisplayName":  "ZTDNS Helper service"
+                     }
+                 ],
+    "Tasks":  [
+                  {
+                      "TaskName":  "FreeDownloadManagerHelperService",
+                      "TaskPath":  "\\",
+                      "FullPath":  "\\FreeDownloadManagerHelperService"
+                  },
+                  {
+                      "TaskName":  "MicrosoftEdgeUpdateTaskMachineCore{EC89A309-B4D4-4D2D-8108-6E99A8AC2F3C}",
+                      "TaskPath":  "\\",
+                      "FullPath":  "\\MicrosoftEdgeUpdateTaskMachineCore{EC89A309-B4D4-4D2D-8108-6E99A8AC2F3C}"
+                  },
+                  {
+                      "TaskName":  "MicrosoftEdgeUpdateTaskMachineUA{2D997818-694D-4E72-A78D-A039C713C6D7}",
+                      "TaskPath":  "\\",
+                      "FullPath":  "\\MicrosoftEdgeUpdateTaskMachineUA{2D997818-694D-4E72-A78D-A039C713C6D7}"
+                  },
+                  {
+                      "TaskName":  "GoogleUpdaterTaskSystem152.0.7933.0{8222A46B-1CEC-41DE-8373-AB0B321A95FF}",
+                      "TaskPath":  "\\GoogleSystem\\GoogleUpdater\\",
+                      "FullPath":  "\\GoogleSystem\\GoogleUpdater\\GoogleUpdaterTaskSystem152.0.7933.0{8222A46B-1CEC-41DE-8373-AB0B321A95FF}"
+                  },
+                  {
+                      "TaskName":  ".NET Framework NGEN v4.0.30319 64 Critical",
+                      "TaskPath":  "\\Microsoft\\Windows\\.NET Framework\\",
+                      "FullPath":  "\\Microsoft\\Windows\\.NET Framework\\.NET Framework NGEN v4.0.30319 64 Critical"
+                  },
+                  {
+                      "TaskName":  ".NET Framework NGEN v4.0.30319 Critical",
+                      "TaskPath":  "\\Microsoft\\Windows\\.NET Framework\\",
+                      "FullPath":  "\\Microsoft\\Windows\\.NET Framework\\.NET Framework NGEN v4.0.30319 Critical"
+                  },
+                  {
+                      "TaskName":  "AD RMS Rights Policy Template Management (Automated)",
+                      "TaskPath":  "\\Microsoft\\Windows\\Active Directory Rights Management Services Client\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Active Directory Rights Management Services Client\\AD RMS Rights Policy Template Management (Automated)"
+                  },
+                  {
+                      "TaskName":  "PolicyConverter",
+                      "TaskPath":  "\\Microsoft\\Windows\\AppID\\",
+                      "FullPath":  "\\Microsoft\\Windows\\AppID\\PolicyConverter"
+                  },
+                  {
+                      "TaskName":  "VerifiedPublisherCertStoreCheck",
+                      "TaskPath":  "\\Microsoft\\Windows\\AppID\\",
+                      "FullPath":  "\\Microsoft\\Windows\\AppID\\VerifiedPublisherCertStoreCheck"
+                  },
+                  {
+                      "TaskName":  "Microsoft Compatibility Appraiser Exp",
+                      "TaskPath":  "\\Microsoft\\Windows\\Application Experience\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser Exp"
+                  },
+                  {
+                      "TaskName":  "StartupAppTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Application Experience\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Application Experience\\StartupAppTask"
+                  },
+                  {
+                      "TaskName":  "Pre-staged app cleanup",
+                      "TaskPath":  "\\Microsoft\\Windows\\AppxDeploymentClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\AppxDeploymentClient\\Pre-staged app cleanup"
+                  },
+                  {
+                      "TaskName":  "Proxy",
+                      "TaskPath":  "\\Microsoft\\Windows\\Autochk\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Autochk\\Proxy"
+                  },
+                  {
+                      "TaskName":  "BitLocker Encrypt All Drives",
+                      "TaskPath":  "\\Microsoft\\Windows\\BitLocker\\",
+                      "FullPath":  "\\Microsoft\\Windows\\BitLocker\\BitLocker Encrypt All Drives"
+                  },
+                  {
+                      "TaskName":  "BitLocker MDM policy Refresh",
+                      "TaskPath":  "\\Microsoft\\Windows\\BitLocker\\",
+                      "FullPath":  "\\Microsoft\\Windows\\BitLocker\\BitLocker MDM policy Refresh"
+                  },
+                  {
+                      "TaskName":  "License Validation",
+                      "TaskPath":  "\\Microsoft\\Windows\\Clip\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Clip\\License Validation"
+                  },
+                  {
+                      "TaskName":  "LicenseImdsIntegration",
+                      "TaskPath":  "\\Microsoft\\Windows\\Clip\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Clip\\LicenseImdsIntegration"
+                  },
+                  {
+                      "TaskName":  "Consolidator",
+                      "TaskPath":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator"
+                  },
+                  {
+                      "TaskName":  "UsbCeip",
+                      "TaskPath":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip"
+                  },
+                  {
+                      "TaskName":  "Driver Recovery on Reboot",
+                      "TaskPath":  "\\Microsoft\\Windows\\Device Setup\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Device Setup\\Driver Recovery on Reboot"
+                  },
+                  {
+                      "TaskName":  "IntegrityCheck",
+                      "TaskPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\IntegrityCheck"
+                  },
+                  {
+                      "TaskName":  "RegisterDeviceAccountChange",
+                      "TaskPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\RegisterDeviceAccountChange"
+                  },
+                  {
+                      "TaskName":  "RegisterDeviceLocationRightsChange",
+                      "TaskPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\RegisterDeviceLocationRightsChange"
+                  },
+                  {
+                      "TaskName":  "RegisterDevicePeriodic24",
+                      "TaskPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\RegisterDevicePeriodic24"
+                  },
+                  {
+                      "TaskName":  "RegisterUserDevice",
+                      "TaskPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DeviceDirectoryClient\\RegisterUserDevice"
+                  },
+                  {
+                      "TaskName":  "RecommendedTroubleshootingScanner",
+                      "TaskPath":  "\\Microsoft\\Windows\\Diagnosis\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Diagnosis\\RecommendedTroubleshootingScanner"
+                  },
+                  {
+                      "TaskName":  "Microsoft-Windows-DiskDiagnosticDataCollector",
+                      "TaskPath":  "\\Microsoft\\Windows\\DiskDiagnostic\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector"
+                  },
+                  {
+                      "TaskName":  "Microsoft-Windows-DiskDiagnosticResolver",
+                      "TaskPath":  "\\Microsoft\\Windows\\DiskDiagnostic\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver"
+                  },
+                  {
+                      "TaskName":  "StorageSense",
+                      "TaskPath":  "\\Microsoft\\Windows\\DiskFootprint\\",
+                      "FullPath":  "\\Microsoft\\Windows\\DiskFootprint\\StorageSense"
+                  },
+                  {
+                      "TaskName":  "DmClient",
+                      "TaskPath":  "\\Microsoft\\Windows\\Feedback\\Siuf\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient"
+                  },
+                  {
+                      "TaskName":  "DmClientOnScenarioDownload",
+                      "TaskPath":  "\\Microsoft\\Windows\\Feedback\\Siuf\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload"
+                  },
+                  {
+                      "TaskName":  "Property Definition Sync",
+                      "TaskPath":  "\\Microsoft\\Windows\\File Classification Infrastructure\\",
+                      "FullPath":  "\\Microsoft\\Windows\\File Classification Infrastructure\\Property Definition Sync"
+                  },
+                  {
+                      "TaskName":  "BootstrapUsageDataReporting",
+                      "TaskPath":  "\\Microsoft\\Windows\\Flighting\\FeatureConfig\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Flighting\\FeatureConfig\\BootstrapUsageDataReporting"
+                  },
+                  {
+                      "TaskName":  "PenSyncDataAvailable",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\PenSyncDataAvailable"
+                  },
+                  {
+                      "TaskName":  "RemoteMouseSyncDataAvailable",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\RemoteMouseSyncDataAvailable"
+                  },
+                  {
+                      "TaskName":  "RemotePenSyncDataAvailable",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\RemotePenSyncDataAvailable"
+                  },
+                  {
+                      "TaskName":  "RemoteTouchpadSyncDataAvailable",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\RemoteTouchpadSyncDataAvailable"
+                  },
+                  {
+                      "TaskName":  "syncpensettings",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\syncpensettings"
+                  },
+                  {
+                      "TaskName":  "TouchpadSyncDataAvailable",
+                      "TaskPath":  "\\Microsoft\\Windows\\input\\",
+                      "FullPath":  "\\Microsoft\\Windows\\input\\TouchpadSyncDataAvailable"
+                  },
+                  {
+                      "TaskName":  "ScanForUpdates",
+                      "TaskPath":  "\\Microsoft\\Windows\\InstallService\\",
+                      "FullPath":  "\\Microsoft\\Windows\\InstallService\\ScanForUpdates"
+                  },
+                  {
+                      "TaskName":  "ScanForUpdatesAsUser",
+                      "TaskPath":  "\\Microsoft\\Windows\\InstallService\\",
+                      "FullPath":  "\\Microsoft\\Windows\\InstallService\\ScanForUpdatesAsUser"
+                  },
+                  {
+                      "TaskName":  "SmartRetry",
+                      "TaskPath":  "\\Microsoft\\Windows\\InstallService\\",
+                      "FullPath":  "\\Microsoft\\Windows\\InstallService\\SmartRetry"
+                  },
+                  {
+                      "TaskName":  "WakeUpAndContinueUpdates",
+                      "TaskPath":  "\\Microsoft\\Windows\\InstallService\\",
+                      "FullPath":  "\\Microsoft\\Windows\\InstallService\\WakeUpAndContinueUpdates"
+                  },
+                  {
+                      "TaskName":  "WakeUpAndScanForUpdates",
+                      "TaskPath":  "\\Microsoft\\Windows\\InstallService\\",
+                      "FullPath":  "\\Microsoft\\Windows\\InstallService\\WakeUpAndScanForUpdates"
+                  },
+                  {
+                      "TaskName":  "Uninstallation",
+                      "TaskPath":  "\\Microsoft\\Windows\\LanguageComponentsInstaller\\",
+                      "FullPath":  "\\Microsoft\\Windows\\LanguageComponentsInstaller\\Uninstallation"
+                  },
+                  {
+                      "TaskName":  "WinSAT",
+                      "TaskPath":  "\\Microsoft\\Windows\\Maintenance\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Maintenance\\WinSAT"
+                  },
+                  {
+                      "TaskName":  "DetectHardwareChange",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Autopilot\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Autopilot\\DetectHardwareChange"
+                  },
+                  {
+                      "TaskName":  "RemediateHardwareChange",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Autopilot\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Autopilot\\RemediateHardwareChange"
+                  },
+                  {
+                      "TaskName":  "Cellular",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\Cellular"
+                  },
+                  {
+                      "TaskName":  "MdmDiagnosticsCleanup",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\MdmDiagnosticsCleanup"
+                  },
+                  {
+                      "TaskName":  "Retry",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\Retry"
+                  },
+                  {
+                      "TaskName":  "RunOnReboot",
+                      "TaskPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Management\\Provisioning\\RunOnReboot"
+                  },
+                  {
+                      "TaskName":  "MapsToastTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Maps\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Maps\\MapsToastTask"
+                  },
+                  {
+                      "TaskName":  "MapsUpdateTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Maps\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Maps\\MapsUpdateTask"
+                  },
+                  {
+                      "TaskName":  "AutomaticOfflineMemoryDiagnostic",
+                      "TaskPath":  "\\Microsoft\\Windows\\MemoryDiagnostic\\",
+                      "FullPath":  "\\Microsoft\\Windows\\MemoryDiagnostic\\AutomaticOfflineMemoryDiagnostic"
+                  },
+                  {
+                      "TaskName":  "RunFullMemoryDiagnostic",
+                      "TaskPath":  "\\Microsoft\\Windows\\MemoryDiagnostic\\",
+                      "FullPath":  "\\Microsoft\\Windows\\MemoryDiagnostic\\RunFullMemoryDiagnostic"
+                  },
+                  {
+                      "TaskName":  "Background Synchronization",
+                      "TaskPath":  "\\Microsoft\\Windows\\Offline Files\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Offline Files\\Background Synchronization"
+                  },
+                  {
+                      "TaskName":  "Logon Synchronization",
+                      "TaskPath":  "\\Microsoft\\Windows\\Offline Files\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Offline Files\\Logon Synchronization"
+                  },
+                  {
+                      "TaskName":  "PrinterCleanupTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Printing\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Printing\\PrinterCleanupTask"
+                  },
+                  {
+                      "TaskName":  "PrintJobCleanupTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Printing\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Printing\\PrintJobCleanupTask"
+                  },
+                  {
+                      "TaskName":  "VerifyWinRE",
+                      "TaskPath":  "\\Microsoft\\Windows\\RecoveryEnvironment\\",
+                      "FullPath":  "\\Microsoft\\Windows\\RecoveryEnvironment\\VerifyWinRE"
+                  },
+                  {
+                      "TaskName":  "OOBEFodSetup",
+                      "TaskPath":  "\\Microsoft\\Windows\\Servicing\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Servicing\\OOBEFodSetup"
+                  },
+                  {
+                      "TaskName":  "Account Cleanup",
+                      "TaskPath":  "\\Microsoft\\Windows\\SharedPC\\",
+                      "FullPath":  "\\Microsoft\\Windows\\SharedPC\\Account Cleanup"
+                  },
+                  {
+                      "TaskName":  "FamilySafetyMonitor",
+                      "TaskPath":  "\\Microsoft\\Windows\\Shell\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor"
+                  },
+                  {
+                      "TaskName":  "FamilySafetyRefreshTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\Shell\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Shell\\FamilySafetyRefreshTask"
+                  },
+                  {
+                      "TaskName":  "ThemeAssetTask_SyncFODState",
+                      "TaskPath":  "\\Microsoft\\Windows\\Shell\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Shell\\ThemeAssetTask_SyncFODState"
+                  },
+                  {
+                      "TaskName":  "SvcRestartTaskLogon",
+                      "TaskPath":  "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\",
+                      "FullPath":  "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskLogon"
+                  },
+                  {
+                      "TaskName":  "SvcRestartTaskNetwork",
+                      "TaskPath":  "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\",
+                      "FullPath":  "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskNetwork"
+                  },
+                  {
+                      "TaskName":  "Storage Tiers Optimization",
+                      "TaskPath":  "\\Microsoft\\Windows\\Storage Tiers Management\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Storage Tiers Management\\Storage Tiers Optimization"
+                  },
+                  {
+                      "TaskName":  "LicenseAcquisition",
+                      "TaskPath":  "\\Microsoft\\Windows\\Subscription\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Subscription\\LicenseAcquisition"
+                  },
+                  {
+                      "TaskName":  "HybridDriveCachePrepopulate",
+                      "TaskPath":  "\\Microsoft\\Windows\\Sysmain\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Sysmain\\HybridDriveCachePrepopulate"
+                  },
+                  {
+                      "TaskName":  "HybridDriveCacheRebalance",
+                      "TaskPath":  "\\Microsoft\\Windows\\Sysmain\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Sysmain\\HybridDriveCacheRebalance"
+                  },
+                  {
+                      "TaskName":  "Schedule Maintenance Work",
+                      "TaskPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\",
+                      "FullPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Maintenance Work"
+                  },
+                  {
+                      "TaskName":  "Schedule Scan",
+                      "TaskPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\",
+                      "FullPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan"
+                  },
+                  {
+                      "TaskName":  "Schedule Scan Static Task",
+                      "TaskPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\",
+                      "FullPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan Static Task"
+                  },
+                  {
+                      "TaskName":  "Schedule Wake To Work",
+                      "TaskPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\",
+                      "FullPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Wake To Work"
+                  },
+                  {
+                      "TaskName":  "Schedule Work",
+                      "TaskPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\",
+                      "FullPath":  "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Work"
+                  },
+                  {
+                      "TaskName":  "HiveUploadTask",
+                      "TaskPath":  "\\Microsoft\\Windows\\User Profile Service\\",
+                      "FullPath":  "\\Microsoft\\Windows\\User Profile Service\\HiveUploadTask"
+                  },
+                  {
+                      "TaskName":  "QueueReporting",
+                      "TaskPath":  "\\Microsoft\\Windows\\Windows Error Reporting\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting"
+                  },
+                  {
+                      "TaskName":  "ModelCachingIdle",
+                      "TaskPath":  "\\Microsoft\\Windows\\WindowsAI\\ClickToDo\\",
+                      "FullPath":  "\\Microsoft\\Windows\\WindowsAI\\ClickToDo\\ModelCachingIdle"
+                  },
+                  {
+                      "TaskName":  "InitialConfiguration",
+                      "TaskPath":  "\\Microsoft\\Windows\\WindowsAI\\Recall\\",
+                      "FullPath":  "\\Microsoft\\Windows\\WindowsAI\\Recall\\InitialConfiguration"
+                  },
+                  {
+                      "TaskName":  "WIM-Hash-Validation",
+                      "TaskPath":  "\\Microsoft\\Windows\\WOF\\",
+                      "FullPath":  "\\Microsoft\\Windows\\WOF\\WIM-Hash-Validation"
+                  },
+                  {
+                      "TaskName":  "Automatic-Device-Join",
+                      "TaskPath":  "\\Microsoft\\Windows\\Workplace Join\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Workplace Join\\Automatic-Device-Join"
+                  },
+                  {
+                      "TaskName":  "Device-Sync",
+                      "TaskPath":  "\\Microsoft\\Windows\\Workplace Join\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Workplace Join\\Device-Sync"
+                  },
+                  {
+                      "TaskName":  "Recovery-Check",
+                      "TaskPath":  "\\Microsoft\\Windows\\Workplace Join\\",
+                      "FullPath":  "\\Microsoft\\Windows\\Workplace Join\\Recovery-Check"
+                  },
+                  {
+                      "TaskName":  "XblGameSaveTask",
+                      "TaskPath":  "\\Microsoft\\XblGameSave\\",
+                      "FullPath":  "\\Microsoft\\XblGameSave\\XblGameSaveTask"
+                  },
+                  {
+                      "TaskName":  "Firefox Background Update S-1-5-21-3668726520-3217875878-1049662499-1001 308046B0AF4A39CB",
+                      "TaskPath":  "\\Mozilla\\",
+                      "FullPath":  "\\Mozilla\\Firefox Background Update S-1-5-21-3668726520-3217875878-1049662499-1001 308046B0AF4A39CB"
+                  },
+                  {
+                      "TaskName":  "Firefox Default Browser Agent 308046B0AF4A39CB",
+                      "TaskPath":  "\\Mozilla\\",
+                      "FullPath":  "\\Mozilla\\Firefox Default Browser Agent 308046B0AF4A39CB"
+                  },
+                  {
+                      "TaskName":  "SoftLandingCreativeManagementTask",
+                      "TaskPath":  "\\SoftLanding\\S-1-5-21-3668726520-3217875878-1049662499-1001\\",
+                      "FullPath":  "\\SoftLanding\\S-1-5-21-3668726520-3217875878-1049662499-1001\\SoftLandingCreativeManagementTask"
+                  }
+              ]
+}

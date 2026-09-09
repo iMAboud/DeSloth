@@ -1,0 +1,22 @@
+# Build & Output
+dist/
+*.exe
+*.zip
+*.tmp
+*.log
+
+# Windows System Files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node / Dependencies (if any)
+node_modules/
