@@ -1,6 +1,6 @@
-# Load and aggregate data from Win11Debloat, WinUtil, Services, and Task Scheduler
+﻿# Load and aggregate data from Win11Debloat, WinUtil, Services, and Task Scheduler
 param(
-    [string]$RootDir = "d:\Declut"
+    [string]$RootDir = (Split-Path -Parent $PSScriptRoot)
 )
 
 function Get-DebloatData {
@@ -222,3 +222,4 @@ function Get-DebloatData {
 
     return $result
 }
+

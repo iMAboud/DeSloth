@@ -1,6 +1,6 @@
-# Ultimate Windows Debloat - Creator UI & Configurator
+﻿# Ultimate Windows Debloat - Creator UI & Configurator
 param(
-    [string]$BaseDir = "d:\Declut"
+    [string]$BaseDir = (Split-Path -Parent $PSScriptRoot)
 )
 
 class AppItemViewModel {
@@ -501,7 +501,7 @@ if (Test-Path $winutilPresetPath) {
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBox x:Name="TxtOutputDir" Style="{StaticResource SearchBox}" Text="d:\Declut\dist" IsReadOnly="True"/>
+                                    <TextBox x:Name="TxtOutputDir" Style="{StaticResource SearchBox}" Text="" IsReadOnly="True"/>
                                     <Button x:Name="BtnBrowseOutput" Grid.Column="1" Content="Browse..." Style="{StaticResource ModernBtn}" Background="#334155" Margin="8,0,0,0"/>
                                 </Grid>
 
@@ -577,6 +577,7 @@ $txtSummaryWinUtil      = $window.FindName("TxtSummaryWinUtil")
 $txtSummaryServices     = $window.FindName("TxtSummaryServices")
 $txtSummaryTasks        = $window.FindName("TxtSummaryTasks")
 $txtOutputDir           = $window.FindName("TxtOutputDir")
+$txtOutputDir.Text = (Join-Path $BaseDir "dist")
 $btnBrowseOutput        = $window.FindName("BtnBrowseOutput")
 $btnExportRunner        = $window.FindName("BtnExportRunner")
 $btnSaveConfigProfile   = $window.FindName("BtnSaveConfigProfile")
@@ -1055,3 +1056,5 @@ Update-Summary
 
 # Show Window
 $window.ShowDialog() | Out-Null
+
+

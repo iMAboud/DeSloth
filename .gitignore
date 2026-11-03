@@ -1,6 +1,8 @@
 # Build & Output
-dist/
+dist/*
+!dist/DeSloth.exe
 *.exe
+!dist/DeSloth.exe
 *.zip
 *.tmp
 *.log

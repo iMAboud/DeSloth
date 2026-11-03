@@ -54,7 +54,7 @@ echo [SUCCESS] Compiled successfully: %OUT%
 echo ==================================================
 echo.
 popd
-pause
+if /i "%~1" neq "/nopause" if /i "%~1" neq "-nopause" echo %cmdcmdline% | find /i "/c" >nul || pause
 exit /b 0
 
 :FAIL
@@ -64,5 +64,5 @@ echo [ERROR] Compilation failed.
 echo ==================================================
 echo.
 popd
-pause
+if /i "%~1" neq "/nopause" if /i "%~1" neq "-nopause" echo %cmdcmdline% | find /i "/c" >nul || pause
 exit /b 1

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Interop;
@@ -28,7 +29,14 @@ namespace UltimateDebloat
         private Button btnStart;
         private Button btnClose;
         private Button btnRestartExplorer;
+        private Button btnToggleDebug;
+        private Border debugPanel;
+        private RichTextBox txtDebugLog;
+        private FlowDocument docDebugLog;
         private string tempDir;
+        private string debugLogFilePath;
+        private int noticeCount = 0;
+        private bool isDebugVisible = false;
 
         // Path geometries for vector step icons
         private const string ICON_BOLT = "M13,10V3L4,14H11V21L20,10H13Z";
@@ -39,11 +47,11 @@ namespace UltimateDebloat
         private const string ICON_CLOCK = "M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V8H19V19M11,10H13V14H15V16H9V14H11V10Z";
         private const string ICON_CHECK = "M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z";
 
-        public RunnerWindow()
+        public RunnerWindow(bool startInDebug = false)
         {
             Title = "DeSloth";
-            Width = 590;
-            Height = 440;
+            Width = 600;
+            Height = startInDebug ? 650 : 440;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             WindowStyle = WindowStyle.None;
             AllowsTransparency = true;
@@ -52,16 +60,20 @@ namespace UltimateDebloat
             SnapsToDevicePixels = true;
             UseLayoutRounding = true;
 
+            debugLogFilePath = IOPath.Combine(IOPath.GetTempPath(), "DeSloth-debug.log");
+            isDebugVisible = startInDebug;
+
             ImageSource appIcon = LoadAppIcon();
             if (appIcon != null)
             {
                 Icon = appIcon;
             }
 
-            BuildUI(appIcon);
+            BuildUI(appIcon, startInDebug);
+            LogInitSystemInfo();
         }
 
-        private void BuildUI(ImageSource appIcon)
+        private void BuildUI(ImageSource appIcon, bool startInDebug)
         {
             // Transparent root Grid avoids window rect clipping artifacts
             Grid rootGrid = new Grid
@@ -76,10 +88,10 @@ namespace UltimateDebloat
                 }
             };
 
-            // Main rounded card with 24px padding margin to prevent ghost rectangular shadow artifacts
+            // Main rounded card
             Border outerBorder = new Border
             {
-                Margin = new Thickness(22),
+                Margin = new Thickness(20),
                 CornerRadius = new CornerRadius(18),
                 Background = new SolidColorBrush(Color.FromRgb(15, 17, 23)),
                 BorderBrush = new SolidColorBrush(Color.FromRgb(38, 44, 61)),
@@ -94,8 +106,12 @@ namespace UltimateDebloat
             };
 
             Grid cardGrid = new Grid();
+            cardGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });                  // 0: Header
+            cardGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) }); // 1: Center Stack
+            cardGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });                  // 2: Debug Panel
+            cardGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });                  // 3: Bottom Buttons
 
-            // Header drag bar with transparent hit-testable background across full top area
+            // ================= HEADER =================
             Grid headerGrid = new Grid
             {
                 VerticalAlignment = VerticalAlignment.Top,
@@ -111,6 +127,7 @@ namespace UltimateDebloat
                 }
             };
 
+            // Title & Icon
             StackPanel titleStack = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
             if (appIcon != null)
             {
@@ -149,13 +166,58 @@ namespace UltimateDebloat
             titleStack.Children.Add(titleText);
             headerGrid.Children.Add(titleStack);
 
+            // Right Actions in Header
+            StackPanel headerRight = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Right,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            // LOGS TOGGLE PILL BUTTON
+            btnToggleDebug = new Button
+            {
+                Height = 24,
+                Cursor = Cursors.Hand,
+                Focusable = false,
+                Margin = new Thickness(0, 0, 8, 0),
+                Content = "Logs"
+            };
+
+            ControlTemplate debugToggleTpl = new ControlTemplate(typeof(Button));
+            FrameworkElementFactory dtBorder = new FrameworkElementFactory(typeof(Border));
+            dtBorder.Name = "dtb";
+            dtBorder.SetValue(Border.CornerRadiusProperty, new CornerRadius(12));
+            dtBorder.SetValue(Border.BackgroundProperty, new SolidColorBrush(Color.FromRgb(30, 41, 59)));
+            dtBorder.SetValue(Border.BorderThicknessProperty, new Thickness(1));
+            dtBorder.SetValue(Border.BorderBrushProperty, new SolidColorBrush(Color.FromRgb(51, 65, 85)));
+            dtBorder.SetValue(Border.PaddingProperty, new Thickness(9, 2, 9, 2));
+
+            FrameworkElementFactory dtText = new FrameworkElementFactory(typeof(ContentPresenter));
+            dtText.SetValue(ContentPresenter.HorizontalAlignmentProperty, HorizontalAlignment.Center);
+            dtText.SetValue(ContentPresenter.VerticalAlignmentProperty, VerticalAlignment.Center);
+            dtBorder.AppendChild(dtText);
+            debugToggleTpl.VisualTree = dtBorder;
+
+            Trigger dtHover = new Trigger { Property = Button.IsMouseOverProperty, Value = true };
+            dtHover.Setters.Add(new Setter(Border.BackgroundProperty, new SolidColorBrush(Color.FromRgb(51, 65, 85)), "dtb"));
+            debugToggleTpl.Triggers.Add(dtHover);
+
+            btnToggleDebug.Template = debugToggleTpl;
+            btnToggleDebug.Foreground = new SolidColorBrush(Color.FromRgb(148, 163, 184));
+            btnToggleDebug.FontSize = 10;
+            btnToggleDebug.FontWeight = FontWeights.SemiBold;
+            btnToggleDebug.Click += delegate(object sender, RoutedEventArgs e)
+            {
+                ToggleDebugView();
+            };
+            headerRight.Children.Add(btnToggleDebug);
+
             // CIRCULAR CLOSE BUTTON
             Button btnWinClose = new Button
             {
-                HorizontalAlignment = HorizontalAlignment.Right,
-                VerticalAlignment = VerticalAlignment.Center,
-                Width = 28,
-                Height = 28,
+                Width = 26,
+                Height = 26,
                 Cursor = Cursors.Hand,
                 Focusable = false
             };
@@ -163,9 +225,9 @@ namespace UltimateDebloat
             ControlTemplate circleCloseTemplate = new ControlTemplate(typeof(Button));
             FrameworkElementFactory circleBorder = new FrameworkElementFactory(typeof(Border));
             circleBorder.Name = "circle";
-            circleBorder.SetValue(Border.CornerRadiusProperty, new CornerRadius(14));
-            circleBorder.SetValue(Border.WidthProperty, 28.0);
-            circleBorder.SetValue(Border.HeightProperty, 28.0);
+            circleBorder.SetValue(Border.CornerRadiusProperty, new CornerRadius(13));
+            circleBorder.SetValue(Border.WidthProperty, 26.0);
+            circleBorder.SetValue(Border.HeightProperty, 26.0);
             circleBorder.SetValue(Border.BackgroundProperty, new SolidColorBrush(Color.FromArgb(45, 255, 255, 255)));
             circleBorder.SetValue(Border.BorderThicknessProperty, new Thickness(1));
             circleBorder.SetValue(Border.BorderBrushProperty, new SolidColorBrush(Color.FromArgb(30, 255, 255, 255)));
@@ -190,18 +252,21 @@ namespace UltimateDebloat
 
             btnWinClose.Template = circleCloseTemplate;
             btnWinClose.Click += delegate(object sender, RoutedEventArgs e) { Close(); };
-            headerGrid.Children.Add(btnWinClose);
+            headerRight.Children.Add(btnWinClose);
 
-            // Center Content
+            headerGrid.Children.Add(headerRight);
+            Grid.SetRow(headerGrid, 0);
+            cardGrid.Children.Add(headerGrid);
+
+            // ================= CENTER CONTENT =================
             StackPanel centerStack = new StackPanel
             {
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                Margin = new Thickness(24, 42, 24, 58),
+                Margin = new Thickness(24, 18, 24, 20),
                 Width = 480
             };
 
-            // Floating large logo with dynamic glow
             iconGlow = new DropShadowEffect
             {
                 BlurRadius = 32,
@@ -215,11 +280,11 @@ namespace UltimateDebloat
                 Image imgLogo = new Image
                 {
                     Source = appIcon,
-                    Width = 104,
-                    Height = 104,
+                    Width = 92,
+                    Height = 92,
                     Stretch = Stretch.Uniform,
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(0, 0, 0, 14),
+                    Margin = new Thickness(0, 0, 0, 10),
                     Effect = iconGlow
                 };
                 RenderOptions.SetBitmapScalingMode(imgLogo, BitmapScalingMode.HighQuality);
@@ -230,11 +295,11 @@ namespace UltimateDebloat
                 stepIcon = new WpfPath
                 {
                     Fill = new SolidColorBrush(Color.FromRgb(96, 165, 250)),
-                    Width = 48,
-                    Height = 48,
+                    Width = 44,
+                    Height = 44,
                     Stretch = Stretch.Uniform,
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(0, 0, 0, 14),
+                    Margin = new Thickness(0, 0, 0, 10),
                     Data = Geometry.Parse(ICON_BOLT),
                     Effect = iconGlow
                 };
@@ -256,16 +321,13 @@ namespace UltimateDebloat
             {
                 Text = "One-Click System Debloat",
                 Foreground = Brushes.White,
-                FontSize = 18,
+                FontSize = 17,
                 FontWeight = FontWeights.SemiBold,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Margin = new Thickness(0, 0, 0, 6)
             };
             centerStack.Children.Add(txtStepTitle);
 
-
-
-            // Real-time progress bar
             pBar = new ProgressBar
             {
                 Height = 6,
@@ -281,39 +343,152 @@ namespace UltimateDebloat
 
             txtLastActivity = new TextBlock
             {
-                Text = "",
+                Text = "Click 'START OPTIMIZING' to begin fast debloat workflow.",
                 Foreground = new SolidColorBrush(Color.FromRgb(100, 116, 139)),
-                FontSize = 10,
+                FontSize = 10.5,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                Margin = new Thickness(0, 4, 0, 0)
+                Margin = new Thickness(0, 4, 0, 0),
+                TextTrimming = TextTrimming.CharacterEllipsis,
+                MaxWidth = 460
             };
             centerStack.Children.Add(txtLastActivity);
 
-            // Bottom Buttons
+            Grid.SetRow(centerStack, 1);
+            cardGrid.Children.Add(centerStack);
+
+            // ================= REAL-TIME DEBUG PANEL =================
+            debugPanel = new Border
+            {
+                Height = 195,
+                CornerRadius = new CornerRadius(10),
+                Background = new SolidColorBrush(Color.FromRgb(11, 14, 20)),
+                BorderBrush = new SolidColorBrush(Color.FromRgb(30, 41, 59)),
+                BorderThickness = new Thickness(1),
+                Margin = new Thickness(18, 0, 18, 10),
+                Visibility = startInDebug ? Visibility.Visible : Visibility.Collapsed
+            };
+
+            Grid debugGrid = new Grid();
+            debugGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(28) });
+            debugGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+            // Debug Toolbar
+            Grid debugToolbar = new Grid
+            {
+                Background = new SolidColorBrush(Color.FromRgb(15, 23, 42)),
+                Margin = new Thickness(0)
+            };
+            TextBlock dbgTitle = new TextBlock
+            {
+                Text = "LIVE EXECUTION TRACE",
+                Foreground = new SolidColorBrush(Color.FromRgb(56, 189, 248)),
+                FontSize = 9.5,
+                FontWeight = FontWeights.Bold,
+                VerticalAlignment = VerticalAlignment.Center,
+                Margin = new Thickness(10, 0, 0, 0)
+            };
+            debugToolbar.Children.Add(dbgTitle);
+
+            StackPanel dbgBtnStack = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Right,
+                VerticalAlignment = VerticalAlignment.Center,
+                Margin = new Thickness(0, 0, 8, 0)
+            };
+
+            Button btnCopy = CreateMiniPillButton("Copy Log");
+            btnCopy.Click += delegate(object s, RoutedEventArgs e)
+            {
+                try
+                {
+                    TextRange tr = new TextRange(docDebugLog.ContentStart, docDebugLog.ContentEnd);
+                    Clipboard.SetText(tr.Text);
+                    btnCopy.Content = "Copied!";
+                }
+                catch { }
+            };
+            dbgBtnStack.Children.Add(btnCopy);
+
+            Button btnOpenFile = CreateMiniPillButton("Open File");
+            btnOpenFile.Click += delegate(object s, RoutedEventArgs e)
+            {
+                try
+                {
+                    if (File.Exists(debugLogFilePath))
+                    {
+                        Process.Start("notepad.exe", debugLogFilePath);
+                    }
+                    else
+                    {
+                        File.WriteAllText(debugLogFilePath, "No log entries yet.");
+                        Process.Start("notepad.exe", debugLogFilePath);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Could not open log file: " + ex.Message);
+                }
+            };
+            dbgBtnStack.Children.Add(btnOpenFile);
+
+            Button btnClear = CreateMiniPillButton("Clear");
+            btnClear.Click += delegate(object s, RoutedEventArgs e)
+            {
+                docDebugLog.Blocks.Clear();
+                noticeCount = 0;
+                btnToggleDebug.Content = "Logs";
+            };
+            dbgBtnStack.Children.Add(btnClear);
+
+            debugToolbar.Children.Add(dbgBtnStack);
+            Grid.SetRow(debugToolbar, 0);
+            debugGrid.Children.Add(debugToolbar);
+
+            // Debug Text Log (RichTextBox with colored spans)
+            docDebugLog = new FlowDocument();
+            docDebugLog.PagePadding = new Thickness(8);
+            txtDebugLog = new RichTextBox(docDebugLog)
+            {
+                IsReadOnly = true,
+                Background = Brushes.Transparent,
+                BorderThickness = new Thickness(0),
+                Foreground = new SolidColorBrush(Color.FromRgb(226, 232, 240)),
+                FontFamily = new FontFamily("Consolas, Courier New, Segoe UI Mono"),
+                FontSize = 10.5,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto
+            };
+            Grid.SetRow(txtDebugLog, 1);
+            debugGrid.Children.Add(txtDebugLog);
+
+            debugPanel.Child = debugGrid;
+            Grid.SetRow(debugPanel, 2);
+            cardGrid.Children.Add(debugPanel);
+
+            // ================= BOTTOM BUTTONS =================
             StackPanel bottomStack = new StackPanel
             {
                 Orientation = Orientation.Horizontal,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Bottom,
-                Margin = new Thickness(0, 0, 0, 16)
+                Margin = new Thickness(0, 0, 0, 14)
             };
 
-            // PILL-SHAPED START BUTTON (Height 42, CornerRadius 21)
             btnStart = new Button
             {
                 Content = "START OPTIMIZING",
-                Height = 42,
+                Height = 40,
                 Width = 190,
                 Foreground = Brushes.White,
                 FontWeight = FontWeights.Bold,
-                FontSize = 13,
+                FontSize = 12.5,
                 Cursor = Cursors.Hand
             };
 
             ControlTemplate pillStartTemplate = new ControlTemplate(typeof(Button));
             FrameworkElementFactory pillBorder = new FrameworkElementFactory(typeof(Border));
             pillBorder.Name = "pill";
-            pillBorder.SetValue(Border.CornerRadiusProperty, new CornerRadius(21));
+            pillBorder.SetValue(Border.CornerRadiusProperty, new CornerRadius(20));
             pillBorder.SetValue(Border.BackgroundProperty, new SolidColorBrush(Color.FromRgb(37, 99, 235)));
             pillBorder.SetValue(Border.BorderThicknessProperty, new Thickness(1));
             pillBorder.SetValue(Border.BorderBrushProperty, new SolidColorBrush(Color.FromArgb(60, 255, 255, 255)));
@@ -342,7 +517,6 @@ namespace UltimateDebloat
             btnStart.Click += BtnStart_Click;
             bottomStack.Children.Add(btnStart);
 
-            // PILL-SHAPED RESTART EXPLORER BUTTON
             btnRestartExplorer = new Button
             {
                 Content = "Restart Explorer",
@@ -369,7 +543,6 @@ namespace UltimateDebloat
             };
             bottomStack.Children.Add(btnRestartExplorer);
 
-            // PILL-SHAPED CLOSE BUTTON
             btnClose = new Button
             {
                 Content = "Close",
@@ -386,13 +559,54 @@ namespace UltimateDebloat
             btnClose.Click += delegate(object sender, RoutedEventArgs e) { Close(); };
             bottomStack.Children.Add(btnClose);
 
-            cardGrid.Children.Add(headerGrid);
-            cardGrid.Children.Add(centerStack);
+            Grid.SetRow(bottomStack, 3);
             cardGrid.Children.Add(bottomStack);
 
             outerBorder.Child = cardGrid;
             rootGrid.Children.Add(outerBorder);
             Content = rootGrid;
+        }
+
+        private Button CreateMiniPillButton(string label)
+        {
+            Button btn = new Button
+            {
+                Content = label,
+                Height = 20,
+                Cursor = Cursors.Hand,
+                Focusable = false,
+                Margin = new Thickness(4, 0, 0, 0),
+                Foreground = new SolidColorBrush(Color.FromRgb(148, 163, 184)),
+                FontSize = 9.5
+            };
+
+            ControlTemplate tpl = new ControlTemplate(typeof(Button));
+            FrameworkElementFactory b = new FrameworkElementFactory(typeof(Border));
+            b.Name = "mb";
+            b.SetValue(Border.CornerRadiusProperty, new CornerRadius(5));
+            b.SetValue(Border.BackgroundProperty, new SolidColorBrush(Color.FromRgb(30, 41, 59)));
+            b.SetValue(Border.PaddingProperty, new Thickness(6, 1, 6, 1));
+
+            FrameworkElementFactory cp = new FrameworkElementFactory(typeof(ContentPresenter));
+            cp.SetValue(ContentPresenter.HorizontalAlignmentProperty, HorizontalAlignment.Center);
+            cp.SetValue(ContentPresenter.VerticalAlignmentProperty, VerticalAlignment.Center);
+            b.AppendChild(cp);
+
+            tpl.VisualTree = b;
+
+            Trigger trg = new Trigger { Property = Button.IsMouseOverProperty, Value = true };
+            trg.Setters.Add(new Setter(Border.BackgroundProperty, new SolidColorBrush(Color.FromRgb(51, 65, 85)), "mb"));
+            tpl.Triggers.Add(trg);
+
+            btn.Template = tpl;
+            return btn;
+        }
+
+        private void ToggleDebugView()
+        {
+            isDebugVisible = !isDebugVisible;
+            debugPanel.Visibility = isDebugVisible ? Visibility.Visible : Visibility.Collapsed;
+            Height = isDebugVisible ? 650 : 440;
         }
 
         private ControlTemplate CreatePillTemplate(Color baseColor, Color hoverColor, double radius)
@@ -415,6 +629,60 @@ namespace UltimateDebloat
             tpl.Triggers.Add(h);
 
             return tpl;
+        }
+
+        private void LogInitSystemInfo()
+        {
+            try
+            {
+                File.WriteAllText(debugLogFilePath, "=== DeSloth Debug Trace Started " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " ===" + Environment.NewLine);
+            }
+            catch { }
+            AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "INIT", "DeSloth application loaded. Debug trace active at: " + debugLogFilePath);
+        }
+
+        public void AppendDebugLog(string level, string timestamp, string category, string message)
+        {
+            Dispatcher.Invoke(new Action(delegate()
+            {
+                try
+                {
+                    Paragraph p = new Paragraph { Margin = new Thickness(0, 1, 0, 1), LineHeight = 15 };
+                    p.Inlines.Add(new Run("[" + timestamp + "] ") { Foreground = new SolidColorBrush(Color.FromRgb(100, 116, 139)) });
+
+                    Color tagColor = Color.FromRgb(148, 163, 184);
+                    if (level == "SUCCESS") tagColor = Color.FromRgb(52, 211, 153);
+                    else if (level == "WARN") tagColor = Color.FromRgb(251, 191, 36);
+                    else if (level == "ERROR") tagColor = Color.FromRgb(248, 113, 113);
+
+                    p.Inlines.Add(new Run("[" + level + "] ") { Foreground = new SolidColorBrush(tagColor), FontWeight = FontWeights.Bold });
+
+                    if (!string.IsNullOrEmpty(category))
+                    {
+                        p.Inlines.Add(new Run("[" + category + "] ") { Foreground = new SolidColorBrush(Color.FromRgb(56, 189, 248)) });
+                    }
+
+                    p.Inlines.Add(new Run(message) { Foreground = new SolidColorBrush(Color.FromRgb(226, 232, 240)) });
+
+                    docDebugLog.Blocks.Add(p);
+                    txtDebugLog.ScrollToEnd();
+
+                    if (level == "WARN" || level == "ERROR")
+                    {
+                        noticeCount++;
+                        btnToggleDebug.Content = string.Format("Logs ({0})", noticeCount);
+                        btnToggleDebug.Foreground = new SolidColorBrush(Color.FromRgb(248, 113, 113));
+                    }
+                }
+                catch { }
+            }));
+
+            try
+            {
+                string line = string.Format("[{0}] [{1}] [{2}] {3}", timestamp, level, category, message);
+                File.AppendAllText(debugLogFilePath, line + Environment.NewLine);
+            }
+            catch { }
         }
 
         private void UpdateStepVisuals(string iconKey)
@@ -452,6 +720,7 @@ namespace UltimateDebloat
         {
             btnStart.IsEnabled = false;
             btnStart.Content = "Optimizing...";
+            AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "WORKFLOW", "Debloat workflow triggered by user.");
 
             await Task.Run(new Action(delegate()
             {
@@ -466,6 +735,8 @@ namespace UltimateDebloat
             {
                 Directory.CreateDirectory(tempDir);
                 string zipPath = IOPath.Combine(tempDir, "payload.zip");
+
+                AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "EXTRACT", "Extracting debloat payload into: " + tempDir);
 
                 // Extract embedded payload resource
                 Assembly assembly = Assembly.GetExecutingAssembly();
@@ -499,6 +770,7 @@ namespace UltimateDebloat
                 {
                     ZipFile.ExtractToDirectory(zipPath, tempDir);
                     File.Delete(zipPath);
+                    AppendDebugLog("SUCCESS", DateTime.Now.ToString("HH:mm:ss.fff"), "EXTRACT", "Payload extracted successfully.");
                 }
 
                 string engineScript = IOPath.Combine(tempDir, "UnifiedRunnerEngine.ps1");
@@ -506,10 +778,12 @@ namespace UltimateDebloat
 
                 if (File.Exists(engineScript) && File.Exists(configPath))
                 {
+                    AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "LAUNCH", "Launching UnifiedRunnerEngine.ps1...");
+
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
                         FileName = "powershell.exe",
-                        Arguments = string.Format("-NoProfile -ExecutionPolicy Bypass -File \"{0}\" -ConfigPath \"{1}\"", engineScript, configPath),
+                        Arguments = string.Format("-NoProfile -ExecutionPolicy Bypass -File \"{0}\" -ConfigPath \"{1}\" -DebugLogPath \"{2}\"", engineScript, configPath, debugLogFilePath),
                         CreateNoWindow = true,
                         UseShellExecute = false,
                         RedirectStandardOutput = true,
@@ -524,23 +798,27 @@ namespace UltimateDebloat
                         {
                             if (!string.IsNullOrEmpty(ev.Data))
                             {
-                                HandleEngineOutput(ev.Data);
+                                HandleEngineLine(ev.Data);
                             }
                         };
                         proc.ErrorDataReceived += delegate(object s, DataReceivedEventArgs ev)
                         {
-                            // Background errors suppressed to prevent UI noise
+                            if (!string.IsNullOrEmpty(ev.Data))
+                            {
+                                AppendDebugLog("ERROR", DateTime.Now.ToString("HH:mm:ss.fff"), "STDERR", ev.Data);
+                            }
                         };
 
                         proc.Start();
                         proc.BeginOutputReadLine();
                         proc.BeginErrorReadLine();
                         proc.WaitForExit();
+                        AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "COMPLETE", "Engine process exited with code: " + proc.ExitCode);
                     }
                 }
                 else
                 {
-                    // Fallback execution if engine script missing
+                    AppendDebugLog("WARN", DateTime.Now.ToString("HH:mm:ss.fff"), "FALLBACK", "Engine script not found, falling back to basic execution.");
                     FallbackDebloatExecution(configPath);
                 }
 
@@ -551,6 +829,7 @@ namespace UltimateDebloat
             }
             catch (Exception ex)
             {
+                AppendDebugLog("ERROR", DateTime.Now.ToString("HH:mm:ss.fff"), "FATAL", "Debloat workflow error: " + ex.Message + "\n" + ex.StackTrace);
                 Dispatcher.Invoke(new Action(delegate()
                 {
                     txtStepTitle.Text = "Completed with Notices";
@@ -560,7 +839,7 @@ namespace UltimateDebloat
             }
         }
 
-        private void HandleEngineOutput(string line)
+        private void HandleEngineLine(string line)
         {
             if (line.StartsWith("STATUS|"))
             {
@@ -589,6 +868,26 @@ namespace UltimateDebloat
                         }
                     }));
                 }
+            }
+            else if (line.StartsWith("DEBUG|"))
+            {
+                string[] parts = line.Split('|');
+                if (parts.Length >= 5)
+                {
+                    string level = parts[1];
+                    string ts = parts[2];
+                    string category = parts[3];
+                    string msg = parts[4];
+                    AppendDebugLog(level, ts, category, msg);
+                }
+                else if (parts.Length >= 4)
+                {
+                    AppendDebugLog(parts[1], parts[2], "ENGINE", parts[3]);
+                }
+            }
+            else
+            {
+                AppendDebugLog("INFO", DateTime.Now.ToString("HH:mm:ss.fff"), "STDOUT", line);
             }
         }
 
@@ -676,7 +975,6 @@ namespace UltimateDebloat
             }
             catch { }
 
-            // If explorer is running normally, only show Close button
             btnRestartExplorer.Visibility = explorerOk ? Visibility.Collapsed : Visibility.Visible;
         }
 
@@ -710,7 +1008,6 @@ namespace UltimateDebloat
 
         private ImageSource LoadAppIcon()
         {
-            // 1. Extract Win32 icon compiled via csc /win32icon (no duplicate managed resource needed)
             try
             {
                 IntPtr hMod = GetModuleHandle(null);
@@ -736,7 +1033,6 @@ namespace UltimateDebloat
             }
             catch { }
 
-            // 2. Fallback: managed resource if present
             try
             {
                 Assembly asm = Assembly.GetExecutingAssembly();
@@ -760,7 +1056,7 @@ namespace UltimateDebloat
             try
             {
                 string localIco = IOPath.Combine(AppDomain.CurrentDomain.BaseDirectory, "src\\desloth.ico");
-                if (!File.Exists(localIco)) localIco = @"d:\Declut\src\desloth.ico";
+                if (!File.Exists(localIco)) localIco = IOPath.Combine(AppDomain.CurrentDomain.BaseDirectory, "desloth.ico");
                 if (File.Exists(localIco))
                 {
                     using (FileStream fs = new FileStream(localIco, FileMode.Open, FileAccess.Read))
@@ -796,12 +1092,29 @@ namespace UltimateDebloat
     public class App : Application
     {
         [STAThread]
-        public static void Main()
+        public static void Main(string[] args)
         {
             try
             {
+                bool startInDebug = false;
+                if (args != null)
+                {
+                    foreach (string a in args)
+                    {
+                        if (a.Equals("-debug", StringComparison.OrdinalIgnoreCase) ||
+                            a.Equals("--debug", StringComparison.OrdinalIgnoreCase) ||
+                            a.Equals("/debug", StringComparison.OrdinalIgnoreCase) ||
+                            a.Equals("-logs", StringComparison.OrdinalIgnoreCase) ||
+                            a.Equals("--logs", StringComparison.OrdinalIgnoreCase) ||
+                            a.Equals("/logs", StringComparison.OrdinalIgnoreCase))
+                        {
+                            startInDebug = true;
+                            break;
+                        }
+                    }
+                }
                 App app = new App();
-                app.Run(new RunnerWindow());
+                app.Run(new RunnerWindow(startInDebug));
             }
             catch (Exception ex)
             {

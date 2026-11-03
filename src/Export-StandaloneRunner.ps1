@@ -5,8 +5,8 @@ function Export-StandaloneRunner {
         [Parameter(Mandatory = $true)]
         [PSCustomObject]$UnifiedConfig,
 
-        [string]$OutputDir = "d:\Declut\dist",
-        [string]$BaseDir   = "d:\Declut"
+        [string]$OutputDir = (Join-Path (Split-Path -Parent $PSScriptRoot) "dist"),
+        [string]$BaseDir   = (Split-Path -Parent $PSScriptRoot)
     )
 
     Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -24,14 +24,14 @@ function Export-StandaloneRunner {
         $unifiedConfigJsonPath = Join-Path $tempStaging "UnifiedConfig.json"
         $UnifiedConfig | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $unifiedConfigJsonPath -Encoding UTF8
 
-        # 2. Generate Win11DebloatConfig.json
+        # 2. Generate Win11DebloatConfig.json (Apps handled cleanly in Step 2; pass empty to avoid duplicate app removal in Step 3)
         $w11dConfig = [ordered]@{
             "Version"    = "1.0"
-            "Apps"       = @($UnifiedConfig.Win11Debloat.Apps)
+            "Apps"       = @()
             "Tweaks"     = @($UnifiedConfig.Win11Debloat.Tweaks | Where-Object { $_.Value -eq $true -or ($null -eq $_.Value -and $_ -is [string]) })
             "Deployment" = @(
-                @{ "Name" = "CreateRestorePoint"; "Value" = [bool]$UnifiedConfig.CreateRestorePoint },
-                @{ "Name" = "SkipRegistryBackup"; "Value" = $false },
+                @{ "Name" = "CreateRestorePoint"; "Value" = $false },
+                @{ "Name" = "SkipRegistryBackup"; "Value" = $true },
                 @{ "Name" = "RestartExplorer"; "Value" = $false }
             )
         }
@@ -52,14 +52,25 @@ function Export-StandaloneRunner {
             Copy-Item -LiteralPath $unifiedEngineSource -Destination (Join-Path $tempStaging "UnifiedRunnerEngine.ps1") -Force
         }
 
-        # 5. Copy winutil.ps1
+        # 5. Copy WinUtil tweaks.json and winutil.ps1
+        $winutilTweaks = Join-Path $BaseDir "winutil-main\config\tweaks.json"
+        if (Test-Path $winutilTweaks) {
+            Copy-Item -LiteralPath $winutilTweaks -Destination (Join-Path $tempStaging "tweaks.json") -Force
+        }
         $winutilSource = Join-Path $BaseDir "winutil-main\winutil.ps1"
         if (-not (Test-Path $winutilSource)) {
-            & powershell.exe -ExecutionPolicy Bypass -File (Join-Path $BaseDir "winutil-main\Compile.ps1")
+            Push-Location (Join-Path $BaseDir "winutil-main")
+            try {
+                powershell.exe -ExecutionPolicy Bypass -File .\Compile.ps1
+            } finally {
+                Pop-Location
+            }
         }
-        Copy-Item -LiteralPath $winutilSource -Destination (Join-Path $tempStaging "winutil.ps1") -Force
+        if (Test-Path $winutilSource) {
+            Copy-Item -LiteralPath $winutilSource -Destination (Join-Path $tempStaging "winutil.ps1") -Force
+        }
 
-        # 6. Copy Win11Debloat-master (required subdirectories to keep payload slim and fast)
+        # 6. Copy Win11Debloat-master
         $w11dTargetDir = Join-Path $tempStaging "Win11Debloat-master"
         New-Item -ItemType Directory -Path $w11dTargetDir -Force | Out-Null
         Copy-Item -LiteralPath (Join-Path $BaseDir "Win11Debloat-master\Win11Debloat.ps1") -Destination $w11dTargetDir -Force
@@ -79,9 +90,10 @@ function Export-StandaloneRunner {
         # 8. Compile Standalone C# .NET 4.5 WPF Executable via csc.exe
         $cscPath = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
         $wpfLibPath = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF"
-        $exeOutPath = Join-Path $OutputDir "UltimateDebloatRunner.exe"
+        $exeOutPath = Join-Path $OutputDir "DeSloth.exe"
         $csAppPath = Join-Path $BaseDir "src\RunnerApp.cs"
         $manifestPath = Join-Path $BaseDir "src\app.manifest"
+        $iconPath = Join-Path $BaseDir "src\desloth.ico"
 
         $compileSuccess = $false
         if (Test-Path $cscPath) {
@@ -99,13 +111,19 @@ function Export-StandaloneRunner {
                 "/r:System.Core.dll",
                 "/r:System.IO.Compression.dll",
                 "/r:System.IO.Compression.FileSystem.dll",
-                "/resource:`"$zipPath`",Payload",
+                "/resource:`"$zipPath`",Payload"
+            )
+            if (Test-Path $iconPath) {
+                $cscArgs += "/win32icon:`"$iconPath`""
+            }
+            $cscArgs += @(
                 "/out:`"$exeOutPath`"",
                 "`"$csAppPath`""
             )
             $compResult = Start-Process -FilePath $cscPath -ArgumentList $cscArgs -NoNewWindow -Wait -PassThru
             if ($compResult.ExitCode -eq 0 -and (Test-Path $exeOutPath)) {
                 $compileSuccess = $true
+                Copy-Item -LiteralPath $exeOutPath -Destination (Join-Path $OutputDir "UltimateDebloatRunner.exe") -Force
             }
         }
 
